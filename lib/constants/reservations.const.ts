@@ -1,0 +1,167 @@
+import type { Reservation, ServiceType, ReservationStatus } from "@/lib/types";
+
+export const SERVICE_TYPES: ServiceType[] = [
+  "کوتاهی مو",
+  "رنگ مو",
+  "اصلاح صورت",
+  "مانیکور",
+  "پدیکور",
+  "ماساژ",
+];
+
+export const STATUS_LABELS: Record<ReservationStatus, string> = {
+  confirmed: "تایید شده",
+  pending: "در انتظار",
+  canceled: "لغو شده",
+  completed: "انجام شده",
+};
+
+export const STATUS_VARIANTS: Record<
+  ReservationStatus,
+  "default" | "secondary" | "destructive" | "outline"
+> = {
+  confirmed: "default",
+  pending: "secondary",
+  canceled: "destructive",
+  completed: "outline",
+};
+
+export const TIME_SLOTS = [
+  "09:00",
+  "10:00",
+  "11:00",
+  "12:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+];
+
+const initialReservationsSeed: Reservation[] = [
+  {
+    id: "r-1",
+    customerName: "علی رضایی",
+    phone: "09121234567",
+    service: "کوتاهی مو",
+    date: "1404-07-20",
+    time: "10:00",
+    status: "confirmed",
+    notes: "مشتری همیشگی",
+    createdAt: "2025-10-10T08:00:00.000Z",
+  },
+  {
+    id: "r-2",
+    customerName: "مریم احمدی",
+    phone: "09129876543",
+    service: "رنگ مو",
+    date: "1404-07-21",
+    time: "14:00",
+    status: "pending",
+    createdAt: "2025-10-11T09:30:00.000Z",
+  },
+  {
+    id: "r-3",
+    customerName: "حسین کریمی",
+    phone: "09351112233",
+    service: "اصلاح صورت",
+    date: "1404-07-21",
+    time: "11:00",
+    status: "completed",
+    createdAt: "2025-10-11T07:15:00.000Z",
+  },
+  {
+    id: "r-4",
+    customerName: "سارا محمدی",
+    phone: "09123334455",
+    service: "مانیکور",
+    date: "1404-07-22",
+    time: "16:00",
+    status: "confirmed",
+    createdAt: "2025-10-12T10:45:00.000Z",
+  },
+  {
+    id: "r-5",
+    customerName: "رضا نوروزی",
+    phone: "09127778899",
+    service: "ماساژ",
+    date: "1404-07-22",
+    time: "18:00",
+    status: "canceled",
+    notes: "درخواست لغو توسط مشتری",
+    createdAt: "2025-10-12T11:00:00.000Z",
+  },
+  {
+    id: "r-6",
+    customerName: "فاطمه حسینی",
+    phone: "09134445566",
+    service: "پدیکور",
+    date: "1404-07-23",
+    time: "15:00",
+    status: "pending",
+    createdAt: "2025-10-13T12:20:00.000Z",
+  },
+  {
+    id: "r-7",
+    customerName: "محمد صادقی",
+    phone: "09126667788",
+    service: "کوتاهی مو",
+    date: "1404-07-23",
+    time: "09:00",
+    status: "confirmed",
+    createdAt: "2025-10-13T06:40:00.000Z",
+  },
+  {
+    id: "r-8",
+    customerName: "نازنین موسوی",
+    phone: "09125556677",
+    service: "رنگ مو",
+    date: "1404-07-24",
+    time: "12:00",
+    status: "pending",
+    createdAt: "2025-10-14T08:50:00.000Z",
+  },
+  {
+    id: "r-9",
+    customerName: "امیر جعفری",
+    phone: "09122223344",
+    service: "اصلاح صورت",
+    date: "1404-07-24",
+    time: "17:00",
+    status: "completed",
+    createdAt: "2025-10-14T15:05:00.000Z",
+  },
+  {
+    id: "r-10",
+    customerName: "زهرا ابراهیمی",
+    phone: "09120001122",
+    service: "مانیکور",
+    date: "1404-07-25",
+    time: "11:00",
+    status: "confirmed",
+    createdAt: "2025-10-15T09:10:00.000Z",
+  },
+  {
+    id: "r-11",
+    customerName: "پوریا قاسمی",
+    phone: "09359998877",
+    service: "ماساژ",
+    date: "1404-07-25",
+    time: "19:00",
+    status: "pending",
+    createdAt: "2025-10-15T13:30:00.000Z",
+  },
+  {
+    id: "r-12",
+    customerName: "لیلا رحمانی",
+    phone: "09128887766",
+    service: "پدیکور",
+    date: "1404-07-26",
+    time: "14:00",
+    status: "confirmed",
+    createdAt: "2025-10-16T10:00:00.000Z",
+  },
+];
+
+export const INITIAL_RESERVATIONS: Reservation[] = initialReservationsSeed;
